@@ -9,6 +9,18 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+app.get('/articleone', function (req,res) {
+    res.send('here you will have first side page');
+});
+
+app.get('/articletwo', function (req,res) {
+    res.send('here you will have second side page');
+});
+
+app.get('/articlethree', function (req,res) {
+    res.send('here you will have third side page');
+});
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });

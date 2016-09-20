@@ -6,17 +6,17 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles = {
-        firstarticle : {
+        'firstarticle' : {
             title : 'firstarticle',
             head1 : 'this page will be filled with wonders',
             head2 : 'page under development.do come back soon'
         },
-        secondarticle : {
+        'secondarticle' : {
             title : 'secondarticle',
             head1 : 'this page will be filled with secret doors to another world',
             head2 : 'page under development.do come back soon'
         },
-        thirdarticle : {
+        'thirdarticle' : {
             title : 'thirdarticle',
             head1 : 'this page will be filled with magcal spells',
             head2 : 'page under development.do come back soon'

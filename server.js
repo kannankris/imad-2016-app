@@ -64,7 +64,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/:articlenumber', function (req,res) {
-    var ntharticle = req.params.articlenumber;
+    var articlenumber = req.params.articlenumber;
   res.send(htmlcreate(articles[articlenumber]));
 });
 

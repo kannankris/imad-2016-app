@@ -6,17 +6,17 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles = {
-        'firstarticle' : {
+        'article-first' : {
             title : 'firstarticle',
             head1 : 'this page will be filled with wonders',
             head2 : 'page under development.do come back soon'
         },
-        'secondarticle' : {
+        'article-second' : {
             title : 'secondarticle',
             head1 : 'this page will be filled with secret doors to another world',
             head2 : 'page under development.do come back soon'
         },
-        'thirdarticle' : {
+        'article-third' : {
             title : 'thirdarticle',
             head1 : 'this page will be filled with magcal spells',
             head2 : 'page under development.do come back soon'
@@ -63,9 +63,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:ntharticle', function (req,res) {
-    var ntharticle = req.params.ntharticle;
-  res.send(htmlcreate(articles[ntharticle]));
+app.get('/:articlenumber', function (req,res) {
+    var ntharticle = req.params.articlenumber;
+  res.send(htmlcreate(articles[articlenumber]));
 });
 
 `app.get('/articletwo', function (req,res) {

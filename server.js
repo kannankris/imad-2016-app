@@ -5,10 +5,22 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var firstarticle = {
-    title : 'firstarticle',
-    head1 : 'this page will be filled with wonders',
-    head2 : 'page under development.do come back soon'
+var articles = {
+        firstarticle : {
+            title : 'firstarticle',
+            head1 : 'this page will be filled with wonders',
+            head2 : 'page under development.do come back soon'
+        },
+        secondarticle : {
+            title : 'secondarticle',
+            head1 : 'this page will be filled with secret doors to another world',
+            head2 : 'page under development.do come back soon'
+        },
+        thirdarticle : {
+            title : 'thirdarticle',
+            head1 : 'this page will be filled with magcal spells',
+            head2 : 'page under development.do come back soon'
+        }
 };
 
 
@@ -51,17 +63,18 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/articleone', function (req,res) {
-  res.send(htmlcreate(firstarticle));
+app.get('/:ntharticle', function (req,res) {
+    var ntharticle = req.params.ntharticle;
+  res.send(htmlcreate(articles[ntharticle]));
 });
 
-app.get('/articletwo', function (req,res) {
+`app.get('/articletwo', function (req,res) {
   res.sendfile(path.join(__dirname, 'ui', 'articletwo.html'));
 });
 
 app.get('/articlethree', function (req,res) {
   res.sendfile(path.join(__dirname, "ui", 'articlethree.html'));
-});
+});`;
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));

@@ -63,15 +63,15 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:articlenumber', function (req,res) {
-    var articlenumber = req.params.articlenumber;
-  res.send(htmlcreate(articles[articlenumber]));
-});
-
 var counter = 0;
 app.get('counter', function (req,res) {
     counter = counter + 1;
     res.send(counter.toString());
+});
+
+app.get('/:articlenumber', function (req,res) {
+    var articlenumber = req.params.articlenumber;
+  res.send(htmlcreate(articles[articlenumber]));
 });
 
 app.get('/ui/main.js', function (req,res) {

@@ -68,6 +68,12 @@ app.get('/:articlenumber', function (req,res) {
   res.send(htmlcreate(articles[articlenumber]));
 });
 
+var counter = 0;
+app.get('counter', function (req,res) {
+    counter = counter + 1;
+    res.send(counter.toString());
+});
+
 app.get('/ui/main.js', function (req,res) {
     res.sendfile(path.join(__dirname, 'ui', 'main.js'));
 });

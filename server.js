@@ -69,6 +69,13 @@ app.get('/counter', function (req,res) {
     res.send(counter.toString());
 });
 
+var names = [];
+app.get('/inputname/:name', function(req,res){
+    var name = req.params.name;
+    names.push(name);
+    res.send(JSON.stringify(names));
+});
+
 app.get('/:articlenumber', function (req,res) {
     var articlenumber = req.params.articlenumber;
   res.send(htmlcreate(articles[articlenumber]));

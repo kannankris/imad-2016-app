@@ -29,7 +29,7 @@ button1.onclick = function () {
 //submitting the name
 var inpname = document.getElementById('iname');
 var valname = inpname.value;
-var submitbut = document.getElementById(subname);
+var submitbut = document.getElementById('subname');
 submitbut.onclick = function(){
     
     var names = ['onnaman', 'randaman', 'moonaman'];

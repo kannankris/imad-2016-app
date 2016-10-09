@@ -30,8 +30,7 @@ button1.onclick = function () {
 var inpname = document.getElementById('iname');
 var valname = inpname.value;
 var submitbut = document.getElementById(subname);
-submit.onclick = function(){
-    
+submitbut.onclick = function(){
     
     var names = ['onnaman', 'randaman', 'moonaman'];
     var list = '';

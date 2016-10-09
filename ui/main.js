@@ -24,3 +24,20 @@ button1.onclick = function () {
 
 
 };
+
+
+//submitting the name
+var inpname = document.getElementById('iname');
+var valname = inpname.value;
+var submitbut = document.getElementById(subname);
+submit.onclick = function(){
+    
+    
+    var names = ['onnaman', 'randaman', 'moonaman'];
+    var list = '';
+    for (var i = 0; i < name.length; i++ ) {
+        list = '<li>' + names[i] +'</li>';
+    }
+    var newlist = document.getElementById('namelist');
+    newlist.innerHTML = list;
+};
